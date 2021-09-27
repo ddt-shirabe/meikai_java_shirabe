@@ -22,7 +22,7 @@ class Account {
 	// 識別番号を保持するクラス変数
 	private int id;
 
-	// Account2コンストラクタ
+	// Accountコンストラクタ
 	public Account(String name, String no, long balance, Day openingDate){
 		// 名前フィールド
 		this.name = name;
@@ -76,7 +76,7 @@ class Account {
 
 public class Enshu9_3 {
 	public static void main(String[] args) {
-		// Account2型のインスタンス初期化
+		// Account型のインスタンス初期化
 		Account adachi = new Account("足立幸一", "123456", 1000,new Day(2021,9,27));
 		// メソッドwithdrawを呼び出し、adachiの預金残高から200マイナスする
 		adachi.withdraw(200);
