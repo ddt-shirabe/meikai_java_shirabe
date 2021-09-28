@@ -69,19 +69,43 @@ public class Enshu9_2 {
 		// d4の表示
 		System.out.println("d4 = " + d4);
 
-		//Day型配列aの宣言
-		Day[] a = new Day[3];
+		// 配列の要素数を入力を促す文章
+		System.out.print("配列の要素数を入力：");
+		// 入力された要素数をelementsに格納する
+		int elements = stdIn.nextInt();
+		//入力された要素数分のDay型配列aの宣言
+		Day[] a = new Day[elements];
+		// 年を格納する変数yearの宣言
+		int year;
+		// 月を格納する変数monthの宣言
+		int month;
+		// 日を格納する変数dayの宣言
+		int day;
+
 		// aの長さ分for文を回す
-		for(int i = 0; i < a.length; i++) {
-			// Day型インスタンスの宣言
-			a[i] = new Day();
+		for(int i = 0; i < elements; i++) {
+			// 年月日入力を促す文章
+			System.out.println("年月日を入力して下さい。");
+			// 年の入力を促す文章
+			System.out.print("年：");
+			// 入力された年を変数yearに格納する
+			year = stdIn.nextInt();
+			// 月の入力を促す文章
+			System.out.print("月：");
+			// 入力された月を変数monthに格納する
+			month = stdIn.nextInt();
+			// 日の入力を促す文章
+			System.out.print("日：");
+			// 入力された日を変数dayに格納する
+			day = stdIn.nextInt();
+			// i個目の要素としてDay型のインスタンスを宣言
+			a[i] = new Day(year,month,day);
 		}
 
 		// aの長さ分for文を回す
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < elements; i++) {
 			// 配列aのi個目の要素を表示
 			System.out.println("a[" + i + "] = " + a[i]);
 		}
-
 	}
 }
