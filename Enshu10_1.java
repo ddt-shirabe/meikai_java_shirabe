@@ -10,7 +10,7 @@ package Chap10;
 
 class Id2 {
 	// 何番まで識別番号を与えたかを保持するクラス変数
-	static int counter = 0;
+	public static int counter = 0;
 
 	// 識別番号を格納するインスタンス変数
 	private int id;
